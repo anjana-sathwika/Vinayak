@@ -7,15 +7,14 @@
   <meta name="description" content="Customize your gifts. DM for orders +91 76759 47933. Premium Corporate Gift Sets. Bulk Orders & Custom Branding." />
   <style>
     :root{
-      --accent: #e3f3fd; /* ultra-light blue */
-      --blue: #5cb6fa;   /* soft accent blue (rare) */
       --whiter: #ffffff;
-      --bg: #fafdff;     /* slightly blue-tinted white — main bg */
+      --blue: #237be8;
+      --whatsapp: #20c964;
       --text: #222c3a;
       --muted: #7a8598;
       --card: #ffffff;
       --radius: 16px;
-      --shadow: 0 8px 24px rgba(92,182,250,0.07);
+      --shadow: 0 8px 24px rgba(92,182,250,0.06);
       font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
     }
     *{box-sizing:border-box}
@@ -23,7 +22,7 @@
     body{
       margin:0;
       color:var(--text);
-      background: linear-gradient(180deg, var(--bg) 0%, var(--whiter) 100%);
+      background: var(--whiter);
       font-size:16px;
       padding:32px 16px;
       display:flex;
@@ -39,35 +38,37 @@
     .brand{display:flex;align-items:center;gap:14px}
     .logo{
       width:56px;height:56px;border-radius:12px;
-      background: linear-gradient(135deg, var(--accent), var(--whiter));
+      background:var(--whiter);
+      border:2px solid var(--blue);
       display:flex;align-items:center;justify-content:center;
-      color:#3796e7;font-weight:700;font-size:18px;box-shadow:var(--shadow)
+      color:var(--blue);font-weight:700;font-size:18px;
+      box-shadow: var(--shadow);
     }
     .brand h1{margin:0;font-size:21px}
     nav{display:flex;gap:16px;align-items:center}
-    a.btn{background:var(--blue);color:#fff;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(92,182,250,0.15)}
-    a.whatsapp{background:#20c964;color:#fff;padding:9px 16px;border-radius:12px;text-decoration:none;font-weight:600;display:flex;align-items:center;gap:7px}
+    a.btn{background:var(--blue);color:#fff;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(36,123,232,0.10)}
+    a.whatsapp{background:var(--whatsapp);color:#fff;padding:9px 16px;border-radius:12px;text-decoration:none;font-weight:600;display:flex;align-items:center;gap:7px}
     a.ghost{background:transparent;padding:8px 12px;border-radius:10px;color:var(--muted);text-decoration:none}
-    .hero-card{background:var(--card);border:1px solid var(--accent);padding:34px;border-radius:20px;box-shadow:var(--shadow);margin-bottom:24px;display:grid;grid-template-columns:1fr 350px;gap:32px;align-items:center;}
+    .hero-card{background:var(--card);border:1px solid #eee;padding:34px;border-radius:20px;box-shadow:var(--shadow);margin-bottom:24px;display:grid;grid-template-columns:1fr 350px;gap:32px;align-items:center;}
     .hero-main h2{font-size:32px;margin:0 0 10px;}
     .hero-main .info{margin:16px 0 0;}
     .highlight{color:var(--blue);font-weight:600}
     .hero-list{margin:12px 0 0;}
     .hero-list span{display:inline-block;margin-bottom:8px;font-size:19px;color:var(--muted);}
     .hero-main .cta-row{display:flex;gap:18px;margin-top:30px}
+    .welcome-msg{color:var(--muted);font-size:17px;margin:14px 0 8px;}
+
     .card-preview{display:flex;flex-direction:column;gap:16px;}
-    .card{background:var(--accent);padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(92,182,250,0.07);display:flex;gap:14px;align-items:center;}
+    .card{background:var(--card);padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(92,182,250,0.06);display:flex;gap:14px;align-items:center;border:1px solid #eee;}
     .thumb{width:52px;height:52px;border-radius:12px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:16px;}
     .meta h4{margin:0 0 6px;font-size:15px}
     .meta p{margin:0;color:var(--muted);font-size:13px}
 
-    /* Products */
     section{margin-top:30px}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-    .big-card{background:var(--card);border:1px solid var(--accent);padding:21px;border-radius:18px;box-shadow:var(--shadow)}
+    .big-card{background:var(--card);border:1px solid #eee;padding:21px;border-radius:18px;box-shadow:var(--shadow)}
     .product-list{display:flex;flex-direction:column;gap:12px}
 
-    /* Bulk order form */
     form .row{display:flex;gap:12px}
     label{display:block;font-size:13px;color:var(--muted);margin-bottom:8px}
     input[type=text],input[type=email],input[type=tel],textarea,select{width:100%;padding:10px;border-radius:10px;border:1px solid #e6eaf5;background:#fff}
@@ -122,6 +123,9 @@
             <span>✨ Premium Corporate Gift Sets</span><br>
             <span>🖤 Sleek • Stylish • Smart</span><br>
             <span>📦 Bulk Orders & Custom Branding</span>
+          </div>
+          <div class="welcome-msg">
+Welcome to our customizable gifts store — order bulk corporate gifts, embroidered hats, photo frames, surprise boxes and more. We make meaningful presents that feel personal.
           </div>
           <div class="cta-row">
             <a class="btn" href="https://www.instagram.com/v_atelier_gifts/" target="_blank">Instagram</a>
@@ -238,7 +242,7 @@
     </main>
 
     <footer>
-      <div class="muted">Made with 💙 by Vinayak's Gifts • Hyderabad</div>
+      <div class="muted">Made with 🤍 by Vinayak's Gifts • Hyderabad</div>
       <div class="muted">© <span id="year"></span></div>
     </footer>
   </div>
