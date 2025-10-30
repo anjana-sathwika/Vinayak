@@ -1,176 +1,107 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Vinayak's Gifts – Curators of Premium & Quirky Gifts</title>
-  <meta name="description" content="Order premium, quirky, and customized gifts online. Fast delivery, exclusive gift sets, direct WhatsApp and form support.">
+  <meta name="description" content="Premium, curated, and quirky gifts for all occasions. Order custom and bulk gifts, fast delivery, instant WhatsApp support.">
+  <link rel="icon" href="https://vinayak-gifts-46t5.vercel.app/favicon.ico">
   <style>
     :root{
-      --primary: #211e32;
-      --accent: #f4f6fb;
-      --cardbg: #fff;
-      --blue: #237be8;
-      --green: #20c964;
-      --muted: #7a8598;
-      --radius: 16px;
-      font-family: 'Inter', ui-sans-serif, system-ui, Arial;
+      --main:#222c3a;
+      --blue:#237be8;
+      --green:#20c964;
+      --muted:#76788a;
+      --accent:#f9fafd;
+      --card:#fff;
+      --radius:14px;
+      font-family:'Inter',Arial,sans-serif;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0;
-      color:var(--primary);
-      background:var(--accent);
-      font-size:16px;
-      padding:0;
-      min-height:100vh;
-    }
-    .navbar{
-      width:100%;
-      background:var(--cardbg);
-      box-shadow:0 2px 14px rgba(30,30,60,0.04);
-      border-bottom:1px solid #eee;
-      display:flex;justify-content:center;
-      position:sticky;top:0;z-index:11;
-    }
-    .navbar-inner{
-      max-width:1200px;
-      width:100%;
-      display:flex;align-items:center;justify-content:space-between;
-      padding:14px 18px;
-    }
-    .brand{font-size:22px;font-weight:700;color:var(--blue)}
-    .navlinks{display:flex;gap:21px}
-    .navlinks a{color:var(--muted);text-decoration:none;font-weight:600;transition:color .2s;}
-    .navlinks a:hover{color:var(--blue);}
-    .action-btn{
-      background:var(--green); padding:8px 16px; border-radius:10px; color:#fff;font-weight:600; text-decoration:none;
-      display:flex;align-items:center; gap:7px;font-size:15px;
-    }
-    .action-btn.insta{background:var(--blue);}
-    .hero{
-      max-width:1200px;margin:0 auto;padding:40px 18px 0 18px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;
-    }
-    .hero-main{
-      max-width:480px;
-    }
-    .hero-main h1{font-size:35px;margin:0 0 14px 0;}
-    .hero-main p{font-size:17px;margin:11px 0 18px 0; color:var(--muted);}
-    .hero-cat{margin:18px 0 12px 0;}
-    .hero-cat span{
-      display:inline-block; margin:0 7px 11px 0; background:var(--accent);color:var(--blue);padding:8px 14px;border-radius:999px;font-weight:600;font-size:15px;
-    }
-    .hero-cta-row{display:flex;gap:14px;}
-    .feature-image{
-      width:360px;max-width:90vw;height:auto;box-shadow:0 6px 32px rgba(220,220,250,0.14);border-radius:14px;object-fit:cover;
-      background:var(--cardbg);
-      margin-left:30px;
-    }
-    .categories{
-      max-width:1200px;margin:40px auto 0 auto;padding:0 18px;
-    }
-    .cat-grid{
-      display:grid;grid-template-columns:repeat(4,1fr);gap:25px;margin-top:10px;
-    }
-    .cat-card{
-      background:var(--cardbg);border-radius:14px;box-shadow:0 2px 8px rgba(30,30,60,0.05);
-      padding:24px 18px;text-align:center;border:1px solid #f1f1f7;transition:box-shadow .2s;
-    }
-    .cat-card:hover{box-shadow:0 12px 28px rgba(50,123,232,0.10);}
-    .cat-icon{
-      font-size:38px;margin-bottom:10px;color:var(--blue);
-    }
-    .cat-title{font-size:19px;font-weight:600;}
-    .cat-desc{color:var(--muted);font-size:14px;margin:7px 0 0 0;}
-    .categories h2{font-size:25px;margin:0 0 18px 0;}
-    .order-bar{
-      max-width:1200px;margin:34px auto;padding:16px 18px;background:var(--cardbg);border-radius:13px;box-shadow:0 1px 7px rgba(60,180,235,0.06);display:flex;align-items:center;justify-content:space-between;
-      border:1px solid #f3f4fa;
-    }
-    .footer{
-      width:100%;background:var(--cardbg);margin-top:40px;padding:20px 18px;font-size:15px;color:var(--muted);
-      border-top:1px solid #ededfd;text-align:center;
-    }
-    /* Order form styling */
-    #orderFormCont{max-width:460px;margin:50px auto 0 auto;}
-    #orderForm{
-      background:#fff;border-radius:14px;border:1px solid #ebeefd;box-shadow:0 2px 16px rgba(30,30,80,0.07);padding:26px 20px;display:flex;flex-direction:column;gap:17px;
-    }
-    #orderForm label{color:#237be8;font-weight:600;}
-    #orderForm input,#orderForm textarea{
-      padding:11px;border:1.5px solid #e3eafc;border-radius:11px;font-family:inherit;font-size:15px;
-    }
+    body{margin:0;background:var(--accent);color:var(--main);}
+    .container{max-width:1100px;margin:0 auto;padding:0 10px;}
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0 0 0;}
+    .brand{font-size:25px;font-weight:900;color:var(--blue);}
+    .wa-btn,a.wa-btn{background:var(--green);color:#fff;text-decoration:none;padding:9px 16px;border-radius:11px;font-weight:700;display:inline-flex;align-items:center;gap:7px;font-size:15px;box-shadow:0 1px 7px rgba(32,201,100,0.12);}
+    .navrow{display:flex;gap:15px;}
+    .navrow a{color:var(--muted);text-decoration:none;font-weight:600;font-size:15px;}
+    .navrow a:hover{color:var(--main);}
+    .hero{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;margin-top:25px;}
+    .hero-main{max-width:450px;}
+    .hero-main h1{font-size:35px;margin:0 0 14px;}
+    .hero-main p{font-size:18px;margin:13px 0 18px;color:var(--muted);}
+    .hero-tags{margin:10px 0 16px;}
+    .hero-tags span{display:inline-block;margin:0 8px 8px 0;padding:8px 15px;background:#eef3fa;color:var(--blue);border-radius:999px;font-weight:600;font-size:14px;}
+    .hero-cta{display:flex;gap:14px;margin-top:10px;}
+    .hero-img{width:350px;max-width:90vw;box-shadow:0 6px 24px rgba(40,90,180,0.08);border-radius:14px;object-fit:cover;}
+    .section-title{font-size:24px;font-weight:900;margin:45px 0 14px 0;}
+    .cat-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:25px;}
+    .cat-card{background:var(--card);border-radius:var(--radius);border:1px solid #f0f0f7;box-shadow:0 2px 8px rgba(30,60,90,0.05);text-align:center;padding:23px 14px;}
+    .cat-icon{font-size:33px;margin-bottom:8px;color:var(--blue);}
+    .cat-title{font-size:17px;font-weight:700;}
+    .cat-desc{color:var(--muted);font-size:14px;margin:8px 0;}
+    .order-bar{display:flex;align-items:center;justify-content:space-between;padding:13px 12px;background:var(--card);border-radius:12px;box-shadow:0 1px 8px rgba(50,123,232,0.06);margin:38px 0 0 0;border:1px solid #f3f4fa;}
+    .order-form-block{max-width:500px;margin:60px auto 20px auto;}
+    #orderForm{background:var(--card);border-radius:14px;padding:26px 18px;border:1px solid #e6eaf5;box-shadow:0 2px 13px rgba(30,30,80,0.07);display:flex;flex-direction:column;gap:17px;}
+    #orderForm label{font-weight:600;color:var(--blue);}
+    #orderForm input,#orderForm select,#orderForm textarea{padding:11px;border:1.5px solid #e3eafc;border-radius:11px;font-family:inherit;}
     #orderForm textarea{resize:vertical;}
-    #orderForm button{
-      background:#237be8;color:#fff;font-weight:600;border:none;padding:13px 0;border-radius:13px;font-size:17px;margin-top:6px;cursor:pointer;
-    }
-    #formSuccess{
-      margin-top:10px;font-size:15px;color:#20c964;font-weight:600;display:none;
-    }
-    .wa-or {
-      padding:25px 0 10px 0;text-align:center;
-    }
-    .wa-or a{
-      background:#20c964;color:#fff;font-weight:600;border-radius:11px;padding:13px 21px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 1px 6px rgba(32,201,100,0.09);font-size:16px;
-    }
-    .wa-or span{
-      color:#237be8;font-size:14px;font-weight:500;margin-top:9px;display:inline-block;
-    }
+    #orderForm button{background:var(--blue);color:#fff;font-weight:700;border:none;padding:13px 0;border-radius:13px;font-size:17px;margin-top:6px;cursor:pointer;}
+    #formSuccess{margin-top:10px;font-size:15px;color:var(--green);font-weight:600;display:none;}
+    .wa-or{text-align:center;margin:25px 0 10px 0;}
+    .wa-or a{background:var(--green);color:#fff;font-weight:700;border-radius:11px;padding:13px 21px;text-decoration:none;display:inline-flex;align-items:center;gap:8px;box-shadow:0 1px 7px rgba(32,201,100,0.09);font-size:16px;}
+    .wa-or span{color:var(--blue);font-size:14px;font-weight:600;margin-top:9px;display:inline-block;}
+    footer{padding:24px 8px;font-size:15px;color:var(--muted);background:var(--card);text-align:center;border-top:1px solid #eceefa;}
+    .footer-row{display:flex;justify-content:center;gap:14px;margin:0 0 8px 0;}
+    .footer-row a{color:var(--blue);font-weight:600;text-decoration:none;}
     @media (max-width:880px){.cat-grid{grid-template-columns:repeat(2,1fr);}
       .hero{flex-direction:column;gap:30px;}
-      .feature-image{margin-left:0;}
+      .hero-img{margin-left:0;}
+      .order-bar{flex-direction:column;gap:18px;}
     }
     @media (max-width:600px){
-      .navbar-inner, .hero, .categories, .order-bar, .footer{padding:12px;}
+      .container{padding:0 5px;}
       .cat-grid{grid-template-columns:1fr;}
-      #orderFormCont{padding:0 7px;}
+      .order-bar{padding:15px 6px;}
+      #orderForm{padding:13px 4px;}
+      .section-title{font-size:20px;}
+      .wa-or a{padding:12px 9px;}
     }
   </style>
 </head>
 <body>
-  <nav class="navbar">
-    <div class="navbar-inner">
-      <span class="brand">Vinayak's Gifts</span>
-      <div class="navlinks">
-        <a href="#bestsellers">Best Sellers</a>
-        <a href="#newarrivals">New Arrivals</a>
-        <a href="#order">Order</a>
-        <a href="#contact">Contact</a>
-        <a href="#track">Track Order</a>
-        <a href="#faq">Help & FAQ</a>
-      </div>
-      <a class="action-btn" href="https://wa.me/917675947933" target="_blank">
-        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" width="19" style="filter:brightness(1.3);"> WhatsApp
-      </a>
+<div class="container">
+
+  <header>
+    <span class="brand">Vinayak's Gifts</span>
+    <div class="navrow">
+      <a href="#order">Order</a>
+      <a href="#contact">Contact</a>
+      <a href="https://wa.me/917675947933" class="wa-btn" target="_blank">WhatsApp</a>
     </div>
-  </nav>
+  </header>
+
   <section class="hero">
     <div class="hero-main">
       <h1>Curators of Premium & Quirky Gifts</h1>
       <p>
         Welcome to our customizable gifts store — order bulk corporate gifts, embroidered hats, photo frames, surprise boxes and more. We make meaningful presents that feel personal.
       </p>
-        <div class="hero-cat">
-          <span>Express Shipping</span>
-          <span>New Arrivals</span>
-          <span>Bulk Corporate Sets</span>
-          <span>Personalized Gifts</span>
-        </div>
-        <div class="hero-cta-row">
-          <a class="action-btn" href="https://wa.me/917675947933" target="_blank">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" width="19" style="filter:brightness(1.3);"> WhatsApp Order
-          </a>
-          <a class="action-btn insta" href="https://www.instagram.com/v_atelier_gifts/" target="_blank">
-            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" width="19" style="filter:brightness(1.9);"> Instagram
-          </a>
-        </div>
+      <div class="hero-tags">
+        <span>Express Shipping</span>
+        <span>New Arrivals</span>
+        <span>Bulk Corporate Sets</span>
+        <span>Personalized Gifts</span>
+      </div>
+      <div class="hero-cta">
+        <a class="wa-btn" href="https://wa.me/917675947933" target="_blank">WhatsApp Us</a>
+        <a class="wa-btn" style="background:var(--blue);" href="https://www.instagram.com/v_atelier_gifts/" target="_blank">Instagram</a>
+      </div>
     </div>
-    <img class="feature-image" src="https://images.unsplash.com/photo-1519864600265-abb232baa5b1?auto=format&fit=crop&w=500&q=80" alt="Gifts Collection">
+    <img class="hero-img" src="https://images.unsplash.com/photo-1519864600265-abb232baa5b1?auto=format&fit=crop&w=500&q=80" alt="Gift Banner">
   </section>
-  <section class="categories">
-    <h2>Shop By Category</h2>
-    <div class="cat-grid">
+
+  <div class="section-title">Shop By Category</div>
+  <div class="cat-grid">
       <div class="cat-card"><div class="cat-icon">🎁</div><div class="cat-title">Bulk Corporate Gifts</div>
         <div class="cat-desc">Premium office sets, stationery, mugs, onboarding kits.</div>
       </div>
@@ -183,59 +114,80 @@
       <div class="cat-card"><div class="cat-icon">🎉</div><div class="cat-title">Gift Sets & Surprises</div>
         <div class="cat-desc">Curated hampers, festive combos, cool gadgets.</div>
       </div>
-    </div>
-  </section>
+  </div>
+
   <div class="order-bar">
     <span>
       <strong>Questions? Need urgent delivery?</strong>
-      <br>DM or WhatsApp: <strong>+91 76759 47933</strong>
-      <br>Email: <a href="mailto:vinayakatelier@gmail.com" style="color:#237be8;text-decoration:none;">vinayakatelier@gmail.com</a>
+      <br>WhatsApp: <strong>+91 76759 47933</strong>
+      <br>Email: <a href="mailto:vinayakatelier@gmail.com" style="color:var(--blue);text-decoration:none;">vinayakatelier@gmail.com</a>
     </span>
-    <a class="action-btn" href="https://wa.me/917675947933" target="_blank">
-      <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" width="19" style="filter:brightness(1.3);"> Chat on WhatsApp
-    </a>
+    <a class="wa-btn" href="https://wa.me/917675947933" target="_blank">Chat on WhatsApp</a>
   </div>
-  <section class="categories" id="order">
-    <h2>Request an Order</h2>
-    <div id="orderFormCont">
-      <form id="orderForm"
-        action="https://formsubmit.co/vinayakatelier@gmail.com"
-        method="POST">
-        <label for="orderName">Name*</label>
-        <input type="text" id="orderName" name="name" required>
-        <label for="orderEmail">Email*</label>
-        <input type="email" id="orderEmail" name="email" required>
-        <label for="orderPhone">Phone / WhatsApp</label>
-        <input type="text" id="orderPhone" name="phone">
-        <label for="orderDetails">Order Details*</label>
-        <textarea id="orderDetails" name="details" required rows="4"
-          placeholder="Describe your gifting need, quantity, customization, budget/occasion..."></textarea>
-        <input type="hidden" name="_captcha" value="false">
-        <button type="submit">Submit Order Request</button>
-        <div id="formSuccess">Request sent! Our team will contact you soon 🎉</div>
-      </form>
-      <div class="wa-or">
-        <a href="https://wa.me/917675947933" target="_blank">
-          <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" width="19" style="filter:brightness(1.3);"> WhatsApp Order
-        </a>
-        <br>
-        <span>Or DM us on <a href="https://www.instagram.com/v_atelier_gifts/" target="_blank" style="color:#237be8;">Instagram</a></span>
-      </div>
+
+  <div class="section-title" id="order">Request a Custom Order</div>
+  <div class="order-form-block">
+    <form id="orderForm"
+      action="https://formsubmit.co/vinayakatelier@gmail.com"
+      method="POST">
+      <label for="orderName">Your Name*</label>
+      <input required name="name" id="orderName" type="text"/>
+      <label for="orderEmail">Email Address*</label>
+      <input required name="email" id="orderEmail" type="email"/>
+      <label for="orderPhone">Phone / WhatsApp</label>
+      <input name="phone" id="orderPhone" type="text"/>
+      <label for="giftType">Gift Type*</label>
+      <select name="giftType" id="giftType" required>
+        <option value="" disabled selected>Select gift type</option>
+        <option>Bulk Corporate</option>
+        <option>Hats & Apparel</option>
+        <option>Frames & Keepsakes</option>
+        <option>Gift Sets & Surprises</option>
+        <option>Other (describe below)</option>
+      </select>
+      <label for="qty">Quantity Range*</label>
+      <select name="qty" id="qty" required>
+        <option value="" disabled selected>Select quantity</option>
+        <option>1-10</option>
+        <option>11-50</option>
+        <option>51-200</option>
+        <option>200+</option>
+      </select>
+      <label for="budget">Budget (optional)</label>
+      <select name="budget" id="budget">
+        <option value="" disabled selected>Select your budget</option>
+        <option>Under ₹500</option>
+        <option>₹500–₹1500</option>
+        <option>₹1500–₹5000</option>
+        <option>Above ₹5000</option>
+      </select>
+      <label for="details">Additional Details*</label>
+      <textarea name="details" id="details" required rows="3" placeholder="Describe customization, delivery, colors, occasion, etc."></textarea>
+      <input type="hidden" name="_captcha" value="false">
+      <button type="submit">Submit Order Request</button>
+      <div id="formSuccess">Order submitted! We'll get back to you soon 🎉</div>
+    </form>
+    <div class="wa-or">
+      <a href="https://wa.me/917675947933" target="_blank">WhatsApp Direct</a>
+      <br>
+      <span>Or DM on <a href="https://www.instagram.com/v_atelier_gifts/" target="_blank" style="color:var(--blue);">Instagram</a></span>
     </div>
-  </section>
-  <footer class="footer">
-    Made with ❤️ by Vinayak's Gifts • Hyderabad &nbsp;|&nbsp;
-    <a href="https://www.instagram.com/v_atelier_gifts/" style="color:#237be8;text-decoration:none;">Instagram</a>
-    &nbsp;|&nbsp;
-    <a href="mailto:vinayakatelier@gmail.com" style="color:#237be8;text-decoration:none;">Contact</a>
-    <br>© <span id="year"></span>
+  </div>
+
+  <footer>
+   <div class="footer-row">
+    <a href="https://www.instagram.com/v_atelier_gifts/" target="_blank">Instagram</a>
+    <a href="mailto:vinayakatelier@gmail.com" target="_blank">Email</a>
+    <a href="https://wa.me/917675947933" target="_blank">WhatsApp</a>
+   </div>
+    Made with ❤️ in Hyderabad • © <span id="year"></span> Vinayak's Gifts
   </footer>
-  <script>
-    document.getElementById('year').innerText = new Date().getFullYear();
-    // Success feedback for order form
-    document.getElementById('orderForm').addEventListener('submit', function(e){
-      document.getElementById('formSuccess').style.display = 'block';
-    });
-  </script>
+</div>
+<script>
+  document.getElementById('year').innerText = new Date().getFullYear();
+  document.getElementById('orderForm').addEventListener('submit', function(e){
+    document.getElementById('formSuccess').style.display = 'block';
+  });
+</script>
 </body>
 </html>
