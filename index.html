@@ -3,99 +3,93 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Vinayak's Gifts — Order Bulk & Personalized Presents</title>
-  <meta name="description" content="Customizable corporate and personal gifts — hats, photo frames, surprise boxes, bulk orders for companies." />
+  <title>Vinayak's Gifts — Premium Custom Corporate Gifts</title>
+  <meta name="description" content="Customize your gifts. DM for orders +91 76759 47933. Premium Corporate Gift Sets. Bulk Orders & Custom Branding." />
   <style>
     :root{
-      --accent:#ffe287; /* pastel yellow accent */
-      --accent-2:#f9ae37; /* rich golden yellow pointer */
-      --bg:#fffcf4;
-      --text:#222;
-      --muted:#a88409;
-      --card:#fffef9;
-      --radius:16px;
-      --glass: rgba(255,255,224,0.6);
-      --page-max:1100px;
-      --shadow: 0 8px 24px rgba(200,160,40,0.08);
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+      --accent: #e3f3fd; /* ultra-light blue */
+      --blue: #5cb6fa;   /* soft accent blue (rare) */
+      --whiter: #ffffff;
+      --bg: #fafdff;     /* slightly blue-tinted white — main bg */
+      --text: #222c3a;
+      --muted: #7a8598;
+      --card: #ffffff;
+      --radius: 16px;
+      --shadow: 0 8px 24px rgba(92,182,250,0.07);
+      font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;
     }
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
       margin:0;
       color:var(--text);
-      background: linear-gradient(180deg, #fffbe7 0%, #fff5cf 100%);
-      -webkit-font-smoothing:antialiased;
-      -moz-osx-font-smoothing:grayscale;
+      background: linear-gradient(180deg, var(--bg) 0%, var(--whiter) 100%);
+      font-size:16px;
       padding:32px 16px;
       display:flex;
       justify-content:center;
       align-items:flex-start;
-      font-size:16px;
     }
     .container{
       width:100%;
-      max-width:var(--page-max);
+      max-width:1100px;
       background:transparent;
     }
     header{display:flex;align-items:center;justify-content:space-between;margin-bottom:28px}
-    .brand{display:flex;align-items:center;gap:12px}
+    .brand{display:flex;align-items:center;gap:14px}
     .logo{
-      width:64px;height:64px;border-radius:12px;
-      background:linear-gradient(135deg,var(--accent),var(--accent-2));
+      width:56px;height:56px;border-radius:12px;
+      background: linear-gradient(135deg, var(--accent), var(--whiter));
       display:flex;align-items:center;justify-content:center;
-      color:#fff;font-weight:700;font-size:20px;box-shadow:var(--shadow)
+      color:#3796e7;font-weight:700;font-size:18px;box-shadow:var(--shadow)
     }
-    .brand h1{margin:0;font-size:20px}
-    nav{display:flex;gap:14px;align-items:center}
-    a.btn{background:var(--accent-2);color:#fff;padding:10px 14px;border-radius:12px;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(249,174,55,0.20)}
+    .brand h1{margin:0;font-size:21px}
+    nav{display:flex;gap:16px;align-items:center}
+    a.btn{background:var(--blue);color:#fff;padding:10px 16px;border-radius:12px;text-decoration:none;font-weight:600;box-shadow:0 6px 18px rgba(92,182,250,0.15)}
+    a.whatsapp{background:#20c964;color:#fff;padding:9px 16px;border-radius:12px;text-decoration:none;font-weight:600;display:flex;align-items:center;gap:7px}
     a.ghost{background:transparent;padding:8px 12px;border-radius:10px;color:var(--muted);text-decoration:none}
-
-    /* HERO */
-    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;padding:36px;border-radius:20px}
-    .hero-card{background:linear-gradient(180deg, rgba(255,255,224,0.96), rgba(255,255,224,0.75));backdrop-filter:blur(6px);padding:28px;border-radius:20px;box-shadow:var(--shadow)}
-    .hero h2{font-size:34px;margin:0 0 12px}
-    .hero p{color:var(--muted);margin:0 0 18px}
-    .cta-row{display:flex;gap:12px;align-items:center}
-
-    /* Product preview */
-    .preview{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    .card{background:var(--card);padding:12px;border-radius:14px;box-shadow:0 6px 18px rgba(200,160,40,0.06);display:flex;gap:12px;align-items:center}
-    .thumb{width:72px;height:72px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#fde6a0);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff}
-    .meta h4{margin:0 0 6px;font-size:16px}
+    .hero-card{background:var(--card);border:1px solid var(--accent);padding:34px;border-radius:20px;box-shadow:var(--shadow);margin-bottom:24px;display:grid;grid-template-columns:1fr 350px;gap:32px;align-items:center;}
+    .hero-main h2{font-size:32px;margin:0 0 10px;}
+    .hero-main .info{margin:16px 0 0;}
+    .highlight{color:var(--blue);font-weight:600}
+    .hero-list{margin:12px 0 0;}
+    .hero-list span{display:inline-block;margin-bottom:8px;font-size:19px;color:var(--muted);}
+    .hero-main .cta-row{display:flex;gap:18px;margin-top:30px}
+    .card-preview{display:flex;flex-direction:column;gap:16px;}
+    .card{background:var(--accent);padding:18px;border-radius:14px;box-shadow:0 6px 18px rgba(92,182,250,0.07);display:flex;gap:14px;align-items:center;}
+    .thumb{width:52px;height:52px;border-radius:12px;background:var(--blue);display:flex;align-items:center;justify-content:center;font-weight:700;color:#fff;font-size:16px;}
+    .meta h4{margin:0 0 6px;font-size:15px}
     .meta p{margin:0;color:var(--muted);font-size:13px}
 
-    /* Sections */
-    section{margin-top:28px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .big-card{background:var(--card);padding:20px;border-radius:18px;box-shadow:var(--shadow)}
+    /* Products */
+    section{margin-top:30px}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+    .big-card{background:var(--card);border:1px solid var(--accent);padding:21px;border-radius:18px;box-shadow:var(--shadow)}
+    .product-list{display:flex;flex-direction:column;gap:12px}
 
     /* Bulk order form */
     form .row{display:flex;gap:12px}
     label{display:block;font-size:13px;color:var(--muted);margin-bottom:8px}
-    input[type=text],input[type=email],input[type=tel],textarea,select{width:100%;padding:10px;border-radius:10px;border:1px solid #ffe287;background:#fff}
+    input[type=text],input[type=email],input[type=tel],textarea,select{width:100%;padding:10px;border-radius:10px;border:1px solid #e6eaf5;background:#fff}
     textarea{min-height:120px}
     .muted{color:var(--muted);font-size:14px}
+    .success{background:#e3fbe8;border:1px solid #b8f1cb;padding:12px;border-radius:10px;color:#0f6446}
 
-    footer{margin-top:28px;padding:18px;border-radius:12px;display:flex;justify-content:space-between;align-items:center}
+    footer{margin-top:34px;padding:18px;border-radius:12px;display:flex;justify-content:space-between;align-items:center;}
 
-    /* Responsive */
     @media (max-width:980px){
-      .hero{grid-template-columns:1fr;}
+      .hero-card{grid-template-columns:1fr;}
       .grid{grid-template-columns:repeat(2,1fr)}
+      .card-preview{flex-direction:row;gap:10px;}
     }
     @media (max-width:600px){
-      body{padding:16px}
+      body{padding:13px}
       .grid{grid-template-columns:1fr}
-      .brand h1{font-size:16px}
-      .logo{width:56px;height:56px}
-      header{gap:12px}
+      .brand h1{font-size:17px}
+      .logo{width:46px;height:46px}
+      header{gap:10px}
+      .hero-main h2{font-size:23px;}
     }
-
-    /* small helpers */
-    .pill{background:var(--accent);padding:8px 12px;border-radius:999px;font-weight:600}
-    .product-list{display:flex;flex-direction:column;gap:12px}
-    .success{background:#fff8e0;border:1px solid #f9e6b0;padding:12px;border-radius:10px;color:#7a660b}
   </style>
 </head>
 <body>
@@ -105,52 +99,48 @@
         <div class="logo" id="logo">VG</div>
         <div>
           <h1 id="brandName">Vinayak's Gifts</h1>
-          <div class="muted" id="tagline">Personalized & bulk gifts for companies, events & special moments</div>
+          <div class="muted" id="tagline">Premium Corporate & Personalized Gifts • Bulk Orders</div>
         </div>
       </div>
       <nav>
         <a class="ghost" href="#products">Products</a>
         <a class="ghost" href="#bulk">Bulk Orders</a>
         <a class="ghost" href="#contact">Contact</a>
-        <a id="igBtn" class="btn" href="https://www.instagram.com/v_atelier_gifts/" target="_blank">Follow on Instagram</a>
+        <a id="igBtn" class="btn" href="https://www.instagram.com/v_atelier_gifts/" target="_blank">Instagram</a>
+        <a class="whatsapp" href="https://wa.me/917675947933" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" width="22" height="22" style="display:inline-block;filter:brightness(1.2)"> Chat on WhatsApp</a>
       </nav>
     </header>
 
     <main>
-      <section class="hero-card hero">
-        <div>
-          <div class="pill">Launch Offer — Discount for bulk first orders</div>
-          <h2>💫 Dreams really do come true</h2>
-          <p>Welcome to our customizable gifts store — order bulk corporate gifts, embroidered hats, photo frames, surprise boxes and more. We make meaningful presents that feel personal.</p>
-          <div class="cta-row" style="margin-top:16px">
-            <a class="btn" id="followCTA" href="https://www.instagram.com/v_atelier_gifts/" target="_blank">Follow us on Instagram</a>
-            <a class="ghost" href="#bulk">Request Bulk Quote</a>
+      <section class="hero-card">
+        <div class="hero-main">
+          <h2>Customize your gifts</h2>
+          <div class="info">
+            <span class="highlight">DM for orders +91 76759 47933</span>
           </div>
-
-          <div style="margin-top:18px;">
-            <strong>Quick services:</strong>
-            <div style="display:flex;gap:10px;margin-top:8px;flex-wrap:wrap">
-              <span class="pill">Corporate Gifts</span>
-              <span class="pill">Custom Hats</span>
-              <span class="pill">Frames & Prints</span>
-              <span class="pill">Surprise Boxes</span>
-            </div>
+          <div class="hero-list">
+            <span>✨ Premium Corporate Gift Sets</span><br>
+            <span>🖤 Sleek • Stylish • Smart</span><br>
+            <span>📦 Bulk Orders & Custom Branding</span>
+          </div>
+          <div class="cta-row">
+            <a class="btn" href="https://www.instagram.com/v_atelier_gifts/" target="_blank">Instagram</a>
+            <a class="whatsapp" href="https://wa.me/917675947933" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" width="22" height="22" style="display:inline-block;filter:brightness(1.2)"> WhatsApp Order</a>
           </div>
         </div>
-
         <aside>
-          <div style="display:flex;flex-direction:column;gap:12px">
+          <div class="card-preview">
             <div class="card">
               <div class="thumb">HAT</div>
-              <div class="meta"><h4>Custom Hats</h4><p>Embroidery or print — full customization for teams & events</p></div>
+              <div class="meta"><h4>Custom Hats</h4><p>Embroidery, print, full customization for events or teams</p></div>
             </div>
             <div class="card">
               <div class="thumb">FRAME</div>
-              <div class="meta"><h4>Photo Frames</h4><p>Personalized frames, MDF/metal options, bulk packaging ready</p></div>
+              <div class="meta"><h4>Photo Frames</h4><p>Personalized frames (MDF/metal), bulk packaging ready</p></div>
             </div>
             <div class="card">
               <div class="thumb">BOX</div>
-              <div class="meta"><h4>Surprise Boxes</h4><p>Curated gifts—branded or custom-themed for special events</p></div>
+              <div class="meta"><h4>Gift Sets</h4><p>Curated boxes for brand launches, festive giving, milestones</p></div>
             </div>
           </div>
         </aside>
@@ -161,29 +151,29 @@
         <div class="grid">
           <div class="big-card">
             <h4>Corporate Bulk Gifts</h4>
-            <p class="muted">Bulk packaging, branding on boxes & items, reliable deadlines for employee gifting.</p>
+            <p class="muted">Bulk packaging, custom branding, fast delivery for professional gifting.</p>
             <ul class="product-list">
-              <li>Branded notebooks & pens</li>
-              <li>Premium personalised mugs</li>
-              <li>Welcome kits & onboarding boxes</li>
+              <li>Branded Stationery</li>
+              <li>Premium Mugs</li>
+              <li>Onboarding Gift Kits</li>
             </ul>
           </div>
           <div class="big-card">
-            <h4>Custom Apparel</h4>
-            <p class="muted">Hats, tees, jackets — embroidery & printing with sample approvals.</p>
+            <h4>Sleek Custom Apparel</h4>
+            <p class="muted">Hats, tees, jackets — embroidery/printing with sample approvals.</p>
             <ul class="product-list">
-              <li>Embroidered hats</li>
-              <li>Printed tees</li>
-              <li>Team uniforms</li>
+              <li>Embroidered Caps</li>
+              <li>Printed Tees</li>
+              <li>Corporate Uniforms</li>
             </ul>
           </div>
           <div class="big-card">
-            <h4>Frames & Keepsakes</h4>
-            <p class="muted">Photo frames, plaques, and memory boxes for awards and events.</p>
+            <h4>Stylish Frames & Keepsakes</h4>
+            <p class="muted">Photo frames, plaques, and memory kits for awards and events.</p>
             <ul class="product-list">
-              <li>Custom photo frames</li>
-              <li>Award plaques</li>
-              <li>Personalized keepsakes</li>
+              <li>Personalized Frames</li>
+              <li>Award Plaques</li>
+              <li>Event Keepsakes</li>
             </ul>
           </div>
         </div>
@@ -203,23 +193,20 @@
                 <input id="qty" name="qty" type="text" placeholder="e.g. 200" required />
               </div>
             </div>
-
             <div style="margin-bottom:12px">
               <label for="items">Items needed</label>
               <select id="items" name="items">
                 <option>Corporate Gifts (mixed)</option>
                 <option>Custom Hats</option>
                 <option>Photo Frames</option>
-                <option>Surprise Boxes</option>
-                <option>Other (specify in message)</option>
+                <option>Gift Sets</option>
+                <option>Other (specify)</option>
               </select>
             </div>
-
             <div style="margin-bottom:12px">
               <label for="message">Project details & deadlines</label>
               <textarea id="message" name="message" placeholder="Colors, logo file, delivery date, packing requirements..."></textarea>
             </div>
-
             <div class="row" style="margin-bottom:12px">
               <div style="flex:1">
                 <label for="name">Your name</label>
@@ -230,11 +217,10 @@
                 <input id="email" name="email" type="email" placeholder="hi@company.com" required />
               </div>
             </div>
-            <!-- Make FormSubmit not use captcha (if you want) -->
             <input type="hidden" name="_captcha" value="false" />
-            <div style="display:flex;gap:12px;align-items:center">
+            <div style="display:flex;gap:16px;align-items:center">
               <button type="submit" class="btn">Send Request</button>
-              <div class="muted">Or message us on Instagram</div>
+              <a class="whatsapp" href="https://wa.me/917675947933" target="_blank"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/whatsapp.svg" width="22" height="22" style="display:inline-block;filter:brightness(1.2)"> WhatsApp Chat</a>
             </div>
           </form>
         </div>
@@ -243,29 +229,28 @@
       <section id="contact">
         <h3 style="margin:8px 0">Contact & Location</h3>
         <div class="big-card">
-          <p class="muted">We accept orders nationwide. For urgent corporate orders, please contact us directly.</p>
+          <p class="muted">We accept orders nationwide. For premium and urgent gifting, contact us below:</p>
           <p><strong>Email:</strong> <a href="mailto:vinayakatelier@gmail.com" id="emailLink">vinayakatelier@gmail.com</a></p>
+          <p><strong>WhatsApp:</strong> <a href="https://wa.me/917675947933" class="whatsapp" target="_blank">Chat +91 76759 47933</a></p>
           <p><strong>Instagram:</strong> <a id="instalink" href="https://www.instagram.com/v_atelier_gifts/" target="_blank">@v_atelier_gifts</a></p>
         </div>
       </section>
     </main>
 
     <footer>
-      <div class="muted">Made with 💖 by Vinayak's Gifts • Hyderabad</div>
+      <div class="muted">Made with 💙 by Vinayak's Gifts • Hyderabad</div>
       <div class="muted">© <span id="year"></span></div>
     </footer>
   </div>
   <script>
     document.getElementById('brandName').innerText = "Vinayak's Gifts";
-    document.getElementById('tagline').innerText = 'Personalized & bulk gifts for companies, events & special moments';
+    document.getElementById('tagline').innerText = 'Premium Corporate & Personalized Gifts • Bulk Orders';
     document.getElementById('logo').innerText = 'VG';
-    document.getElementById('igBtn').href = 'https://www.instagram.com/v_atelier_gifts/';
-    document.getElementById('followCTA').href = 'https://www.instagram.com/v_atelier_gifts/';
-    document.getElementById('instalink').href = 'https://www.instagram.com/v_atelier_gifts/'; 
-    document.getElementById('instalink').innerText = '@v_atelier_gifts';
+    document.getElementById('year').innerText = new Date().getFullYear();
     document.getElementById('emailLink').href = 'mailto:vinayakatelier@gmail.com'; 
     document.getElementById('emailLink').innerText = 'vinayakatelier@gmail.com';
-    document.getElementById('year').innerText = new Date().getFullYear();
+    document.getElementById('instalink').href = 'https://www.instagram.com/v_atelier_gifts/'; 
+    document.getElementById('instalink').innerText = '@v_atelier_gifts';
   </script>
 </body>
 </html>
